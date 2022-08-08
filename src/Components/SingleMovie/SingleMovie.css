@@ -1,0 +1,24 @@
+.card_Single{
+    background-color:white;
+    width: 50rem;
+    margin-left: 24rem;
+    margin-top: 5rem;
+    display: flex;
+}
+h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+.content{
+    margin-left: 1.4rem;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    background-color: aqua;
+    color: white;
+    margin-top: 2rem !important;
+    padding: 0.7rem;
+}
