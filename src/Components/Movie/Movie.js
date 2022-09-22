@@ -20,7 +20,6 @@ const Movie = () => {
                     movie.map((item) => {
                         const { Title, Poster, imdbID } = item
                         const movieName = Title.substring(0, 17)
-
                         return <NavLink to={`movie/${imdbID}`} key={item.imdbID} >
                             <div className="card">
                                 <h2>{movieName.length >= 17 ? `${movieName}...` : movieName}</h2>

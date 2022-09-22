@@ -1,14 +1,14 @@
 import { useContext, createContext, useEffect, useState } from "react";
 
-export  const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=`
-
+// export const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`
+export const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`
 
 export const AppContext = createContext()
 export const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
     const [movie, setMovie] = useState([])
     const [query, setQuery] = useState("titanic")
-    const[error , setError]=useState({show:"false" , msg:""})
+    const [error, setError] = useState({ show: "false", msg: "" })
 
     const getMovies = async (url) => {
         setLoading(true)
@@ -19,8 +19,8 @@ export const AppProvider = ({ children }) => {
             if (data.Response === "True") {
                 setMovie(data.Search)
                 setLoading(false)
-            }else{
-                setError({ show: true, msg:data.Error})
+            } else {
+                setError({ show: true, msg: data.Error })
             }
         } catch (error) {
             console.log(error);
