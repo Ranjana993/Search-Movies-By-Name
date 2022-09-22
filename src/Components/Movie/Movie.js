@@ -9,7 +9,7 @@ const Movie = () => {
     if (loading) {
         return (
             <div className='loading'>
-                <h2>Loading.....</h2>
+                <h3>Loading.....</h3>
             </div>
         )
     }
