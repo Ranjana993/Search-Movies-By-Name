@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
     const [movie, setMovie] = useState([])
     const [query, setQuery] = useState("titanic")
     const [error, setError] = useState({ show: "false", msg: "" })
-
+// console.log("error");
     const getMovies = async (url) => {
         setLoading(true)
         try {
